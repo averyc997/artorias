@@ -1,0 +1,73 @@
+.explain {
+    background-color: black;
+    max-height: 690px;
+    min-height: 690px;
+    max-width: 1390px;
+    min-width: 1390px;
+}
+
+#longAgo {
+    text-align: center;
+    font-style: italic;
+    color:white;
+    padding:20%;
+}
+
+#startScreen {
+    background-color: black;
+    max-height: 700px;
+    min-height: 700px;
+    max-width: 1400px;
+    min-width: 1400px;
+}
+
+.end {
+    background-color: black;
+    
+    min-height: 680px;
+    
+    min-width: 1390px;
+
+}
+
+#endh1 {
+    padding-top: 300px;
+    padding-left: 200px;
+    color: white;
+    text-align: center;
+}
+
+#endButton {
+    padding-left: 45%;
+}
+
+#divid {
+    padding-left: 0%;
+    padding-top: 10%;
+}
+
+#title1 {
+    color: white;
+    text-align:center;
+    font-size: 70px;
+} 
+
+#title2 {
+    color: white;
+    text-align:center;
+}
+
+#buton {
+    background-color: black;
+    text-align: center;
+}
+
+div.signIn111 {
+    margin-top: 150px;
+    margin-left: 20px;
+}
+
+#gameCanvas {
+    border: 1px solid black;
+    background: grey;
+}

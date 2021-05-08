@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta name = "viewport" content = "width=device-width">
+    <title>Artorias, The Abysswalker</title>
+    <link href = "style.css" rel = "stylesheet">
+    
+    
+  </head>
+ 
+  <body>
+    
+    <div id="root">
+        <div id="startScreen">
+            <div id="divid">
+            <h1 id="title1">DARK SOULS</h1>
+            <h2 id="title2">Artorias the Abysswalker</h2>
+            <p id="buton">
+            <button id="begin" class="success">Play A Mini Game</button>
+            </p>
+            <p id="buton">
+            <button id="music">View Dark Souls Music</button>
+            </p>
+            
+            <div class="signIn111">
+              <p class="sign">
+              <input type="email" placeholder="email" id="email"/>
+              </p><p class="sign">
+              <input type="password" placeholder="password" id="password"/>
+              </p>
+              <p class="sign">
+              <button onclick="signUp()" id="signUp">Sign Up</button>
+              <button onclick="signIn()" id="signIn">Sign In</button>
+              <button onclick="signOut()" id="signOut">Sign Out</button>
+              </p>
+              </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src = "node_modules/jquery/dist/jquery.js"></script>
+    <script src = "script.js" type = "text/javascript"></script>
+    <script src = "login.js" type = "text/javascript"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first 
+    <script src="/__/firebase/8.5.0/firebase-app.js"></script>
+
+ TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries 
+<script src="/__/firebase/8.5.0/firebase-analytics.js"></script>
+<script src="/__/firebase/8.5.0/firebase-auth.js"></script>
+
+ Initialize Firebase 
+<script src="/__/firebase/init.js?useEmulator=true"></script>-->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+<!--<script src="https://sdk.scdn.co/spotify-player.js"></script>-->
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDUmLSiKSj0CcOaXvNqPeNxUw_7nMNXbto",
+    authDomain: "artorias-the-abysswalker.firebaseapp.com",
+    databaseURL: "https://artorias-the-abysswalker-default-rtdb.firebaseio.com",
+    projectId: "artorias-the-abysswalker",
+    storageBucket: "artorias-the-abysswalker.appspot.com",
+    messagingSenderId: "642844625943",
+    appId: "1:642844625943:web:c49f60d701f64cb2fb2052",
+    measurementId: "G-RZ49PB8H8F"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  var database = firebase.database().ref().child('emails');
+  firebase.analytics();
+
+  $('#signUp').click(function() {
+    database.push({
+      email:$('#email').val()
+    })
+  });
+
+  //var Spotify = require('spotify-web-api-js');
+  //var s = new Spotify();
+
+  //"**/node_modules/**"
+</script>
+
+  </body>
+
+</html>
